@@ -7,11 +7,6 @@ type Props = {
   position?: "absolute" | "relative" | "static" | "sticky";
 };
 
-type user = {
-  name: string;
-  avatar: string;
-};
-
 const User = () => {
   const { data } = useSession();
   console.log(data);
@@ -25,15 +20,17 @@ const User = () => {
   }
   return (
     <div className={styles.user}>
-      <Image
-        src={data.user?.image}
-        alt="avatar"
-        width={32}
-        height={32}
-        objectFit="cover"
-        onClick={() => signOut()}
-        title={data.user?.name}
-      />
+      {data.user?.image && (
+        <Image
+          src={data.user?.image}
+          alt="avatar"
+          width={32}
+          height={32}
+          objectFit="cover"
+          onClick={() => signOut()}
+          title={`Logout ${data.user?.name}`}
+        />
+      )}
     </div>
   );
 };
