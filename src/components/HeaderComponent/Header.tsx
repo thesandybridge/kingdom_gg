@@ -9,7 +9,6 @@ type Props = {
 
 const User = () => {
   const { data } = useSession();
-  console.log(data);
 
   if (!data) {
     return (
