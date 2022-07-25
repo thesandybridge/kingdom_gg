@@ -1,0 +1,126 @@
+:root {
+  --black: #000411;
+  --dark-black: #050505;
+  --navy: #020a1d;
+  --blue: #9ae5e6;
+  --indigo: #89aae6;
+  --salmon: #c96480;
+  --red: #ff6b6b;
+  --white: #ececec;
+  --gold: #bfa25d;
+  --charcoal: #101010;
+  font-size: 16px;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  color: var(--white);
+  background-color: var(--charcoal);
+  font-family: 'industry', sans-serif;
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "industry";
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumbs > ol {
+  list-style: none;
+  color: var(--gold);
+  display: flex;
+  gap: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 1.5rem;
+}
+
+.breadcrumbs > ol > li > a {
+  position: relative;
+}
+
+.breadcrumbs > ol > li:not(:last-child) > a:hover {
+  opacity: .8;
+}
+
+.breadcrumbs > ol > li:not(:last-child) > a::after {
+  content: '';
+  border-bottom: 1px solid;
+  display: block;
+  width: 0;
+  position: absolute;
+  left: 0;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.breadcrumbs > ol > li > a:hover::after {
+  width: 100%;
+}
+
+.breadcrumbs > ol > li:not(:last-child)::after {
+  content: "»";
+  margin-left: 5px;
+  color: var(--gold);
+}
+
+.breadcrumbs > ol > li:last-child {
+  color: var(--red);
+}
+
+.inner-content {
+  max-width: 900px;
+}
+
+svg {
+  fill: var(--gold);
+}
+
+svg:hover {
+  animation: fillChange 0.5s infinite;
+}
+
+@keyframes fillChange {
+  0% {
+    fill: var(--black);
+  }
+  14% {
+    fill: var(--pink);
+  }
+  28% {
+    fill: var(--blue);
+  }
+  42% {
+    fill: var(--indigo);
+  }
+  56% {
+    fill: var(--salmon);
+  }
+  70% {
+    fill: var(--red);
+  }
+  100% {
+    fill: var(--white);
+  }
+}

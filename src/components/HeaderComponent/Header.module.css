@@ -1,0 +1,65 @@
+.kingHeader {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #000411;
+  z-index: 999;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.innerHeader {
+  display: flex;
+  padding: 0.5rem 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 925px) {
+  .kingHeader {
+    position: relative;
+  }
+}
+
+.lionPaths {
+  fill: #bfa25d;
+  z-index: 999;
+}
+
+.king a {
+  display: flex;
+  align-items: center;
+}
+
+.logo circle {
+  fill: #000411;
+}
+
+.logo:hover circle {
+  animation: fillChange 0.5s infinite;
+}
+
+@keyframes fillChange {
+  0% {
+    fill: var(--black);
+  }
+  14% {
+    fill: var(--pink);
+  }
+  28% {
+    fill: var(--blue);
+  }
+  42% {
+    fill: var(--indigo);
+  }
+  56% {
+    fill: var(--salmon);
+  }
+  70% {
+    fill: var(--red);
+  }
+  100% {
+    fill: var(--white);
+  }
+}

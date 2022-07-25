@@ -1,0 +1,166 @@
+.stripes {
+  height: calc(20px * 2);
+  background-image: linear-gradient(
+    var(--gold) 0%,
+    var(--gold) 50%,
+    var(--red) 50%,
+    var(--red) 100%
+  );
+}
+
+.hero {
+  position: relative;
+}
+
+.video {
+  filter: grayscale(100%);
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%
+}
+
+.video > iframe {
+  position: absolute;
+  aspect-ratio: 16/9;
+  width: 100%;
+  top: 0;
+}
+
+.svg {
+  fill: #bfa25d;
+}
+
+.circleBG {
+  fill: #fff;
+}
+
+.bannerWrapper {
+  padding-top: 56.25%;
+}
+
+.banner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bannerTitle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: var(--gold);
+}
+
+.bannerTitle > .title {
+  font-size: clamp(2.5rem, 5vw, 9rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.bannerTitle > .subTitle {
+  font-size: clamp(2.5rem, 2vw, 5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.infoPanel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.infoTitle {
+  text-align: center;
+  padding: 1rem;
+}
+
+.infoCard {
+  flex-basis: 400px;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px var(--black);
+  color: #ececec;
+}
+
+.infoCard .featuredImage {
+  height: 200px;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.infoCard .title {
+  padding: 1rem;
+}
+
+.infoCard button {
+  background: none;
+  width: 100%;
+  z-index: 1;
+  border: 2px solid var(--gold);
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-size: 1rem;
+  position: relative;
+  letter-spacing: 0.1rem;
+  transition: letter-spacing 0.2s ease-in-out;
+}
+
+.infoCard button:hover {
+  color: var(--charcoal);
+}
+
+.infoCard button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--gold);
+  transform: scaleY(0);
+  transform-origin: 50% 100% 0px;
+  transition: transform 100ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.infoCard button:hover::before {
+  transform: scaleY(1);
+}
+
+.infoCard .excerpt {
+  text-overflow: ellipsis;
+  line-height: 2rem;
+}
+
+.infoCard > .cardHeader {
+  overflow: hidden;
+}
+
+.infoCard > .cardBody {
+  padding: 1rem;
+}
+
+.infoCard > .cardFooter {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  padding: 2rem 0;
+}
+
+

@@ -1,0 +1,29 @@
+.modBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--dark-black);
+}
+
+.modMeta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modMeta a {
+    display: inline-block;
+}
+
+.trailer {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.featuredImage {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1.5rem;
+}

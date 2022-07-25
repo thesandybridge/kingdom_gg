@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  padding: 1rem;
+  color: var(--gold);
+  font-family: 'industry', sans-serif;
+  letter-spacing: 2px;
+  background-color: var(--dark-black);
+}

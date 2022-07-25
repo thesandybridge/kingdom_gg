@@ -1,0 +1,8 @@
+.stripes {
+  background-image: linear-gradient(
+    var(--gold) 0%,
+    var(--gold) 50%,
+    var(--black) 50%,
+    var(--black) 100%
+  );
+}
