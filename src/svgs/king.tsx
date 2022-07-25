@@ -2,7 +2,7 @@ export default function King() {
   return (
     <svg
       id="Layer_1"
-      width="25%"
+      width="15%"
       data-name="Layer 1"
       fill="#BFA25D"
       xmlns="http://www.w3.org/2000/svg"
