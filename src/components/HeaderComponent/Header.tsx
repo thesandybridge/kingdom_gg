@@ -1,12 +1,46 @@
 import styles from "./Header.module.css";
 import Games from "./GamesComponent/Games";
+import Image from "next/image";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 type Props = {
   position?: "absolute" | "relative" | "static" | "sticky";
 };
 
+type user = {
+  name: string;
+  avatar: string;
+};
+
+const User = () => {
+  const { data } = useSession();
+  console.log(data);
+
+  if (!data) {
+    return (
+      <button className={styles.login} onClick={() => signIn("discord")}>
+        Login
+      </button>
+    );
+  }
+  return (
+    <div className={styles.user}>
+      <Image
+        src={data.user?.image}
+        alt="avatar"
+        width={32}
+        height={32}
+        objectFit="cover"
+        onClick={() => signOut()}
+        title={data.user?.name}
+      />
+    </div>
+  );
+};
+
 const Header = (props: Props) => {
   const { position } = props;
+
   return (
     <header
       className={styles.kingHeader}
@@ -80,7 +114,10 @@ const Header = (props: Props) => {
             </svg>
           </a>
         </div>
-        <Games />
+        <div className={styles.utils}>
+          <Games />
+          <User />
+        </div>
       </div>
     </header>
   );

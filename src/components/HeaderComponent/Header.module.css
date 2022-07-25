@@ -63,3 +63,34 @@
     fill: var(--white);
   }
 }
+
+.utils {
+  display: flex;
+  gap: 1rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  
+}
+
+.user img {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user img:hover {
+  border: solid 2px var(--gold) !important;
+}
+
+.login {
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.login:hover {
+  color: var(--gold);
+}
