@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import Breadcrumbs from "../components/BreadCrumbsComponent/BreadCrumbs";
+import Breadcrumbs from "nextjs-breadcrumbs";
 import Footer from "../components/FooterComponent/Footer";
 import Header from "../components/HeaderComponent/Header";
 import Stripe from "../components/StripesComponent/Stripe";
@@ -26,7 +26,7 @@ const Mod = ({ post }: Props) => {
   return (
     <div className={styles.container}>
       <Header position="relative" />
-      <Breadcrumbs useDefaultStyle containerClassName="breadcrumbs" />
+      <Breadcrumbs useDefaultStyle={false} containerClassName="breadcrumbs" />
       <main className={styles.main}>
         <Stripe height={5} amount={2} />
         {router.isFallback ? (
