@@ -74,9 +74,11 @@ const Mod = ({ post }: Props) => {
                   )}
                   <div className={styles.modMeta}>
                     <h1>{post.title}</h1>
+
                     <div className={styles.modSocials}>
                       {post.steamLink && (
                         <a
+                          className="linked-svg"
                           href={post.steamLink}
                           title={`${post.title} on Steam Workshop`}
                           target="_blank"

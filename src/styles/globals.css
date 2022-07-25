@@ -25,6 +25,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-flex;
 }
 
 h1,
@@ -71,6 +72,7 @@ h6 {
   width: 0;
   position: absolute;
   left: 0;
+  bottom: 0;
   -webkit-transition: .25s ease;
   transition: .25s ease;
 }
@@ -123,4 +125,18 @@ svg:hover {
   100% {
     fill: var(--white);
   }
+}
+
+[target="_blank"]:not(.linked-svg)::after {
+  background-color: var(--white);
+  content: '';
+  width: 10px;
+  height: 10px;
+  mask-image: url('/assets/new-tab-icon.svg');
+  mask-size: cover;
+  display: inline-flex;
+}
+
+[target="_blank"]:not(.linked-svg):hover::after {
+  background-color: var(--gold);
 }

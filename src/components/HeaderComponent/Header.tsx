@@ -48,7 +48,12 @@ const Header = (props: Props) => {
     >
       <div className={styles.innerHeader}>
         <div className={styles.king}>
-          <a href="https://discord.gg/F3gkmGw" target="_blank" rel="noreferrer">
+          <a
+            className="linked-svg"
+            href="https://discord.gg/F3gkmGw"
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={styles.logo}

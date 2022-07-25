@@ -5,6 +5,7 @@ export default function Games() {
     <div className={styles.games}>
       <a
         title="Squad"
+        className="linked-svg"
         href="https://joinsquad.com/"
         target="_blank"
         rel="noreferrer"
@@ -17,6 +18,7 @@ export default function Games() {
         />
       </a>
       <a
+        className="linked-svg"
         title="Kingdom Gaming Discord"
         href="https://discord.gg/F3gkmGw"
         target="_blank"

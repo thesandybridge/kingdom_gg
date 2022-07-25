@@ -48,7 +48,17 @@ const InfoCard = (props: PostType) => {
             />
           </div>
         )}
-        <h3 className={styles.title}>{props.title}</h3>
+
+        <h3 className={styles.title}>
+          <a
+            href={props.steamLink}
+            target="_blank"
+            title={`${props.title} on Steam Workshop`}
+            rel="noreferrer"
+          >
+            {props.title}
+          </a>
+        </h3>
       </div>
       <Stripe height={5} amount={2} />
       <div className={styles.cardBody}>
@@ -116,6 +126,7 @@ export const getStaticProps = async () => {
     "author",
     "coverImage",
     "excerpt",
+    "steamLink",
   ]);
 
   return {
