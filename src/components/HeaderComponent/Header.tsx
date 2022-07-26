@@ -51,7 +51,7 @@ const Profile = (props: ProfileProps) => {
   );
 };
 
-const User = (props: any) => {
+const User = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { data } = useSession();
 

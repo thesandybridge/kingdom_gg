@@ -16,9 +16,9 @@
   width: 100%;
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 700px) {
   .kingHeader {
-    position: relative;
+    position: relative !important;
   }
 }
 
