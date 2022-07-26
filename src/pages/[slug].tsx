@@ -34,13 +34,15 @@ const Mod = ({ post }: Props) => {
           <>
             <article>
               <Head>
-                <title>The Kingdom | Mod: {post.title}</title>
+                <title>
+                  The Kingdom | {post.category}: {post.title}
+                </title>
                 <meta name="description" content={post.excerpt} />
                 <meta property="og:image" content={post.ogImage.url} />
                 <meta property="og:type" content="object"></meta>
                 <meta
                   property="og:title"
-                  content={`The Kingdom | Mod: ${post.title}`}
+                  content={`The Kingdom | ${post.category}: ${post.title}`}
                   key="title"
                 />
                 <meta property="og:image:alt" content={post.excerpt} />
@@ -132,6 +134,7 @@ export async function getStaticProps({ params }: Params) {
     "coverImage",
     "steamLink",
     "trailer",
+    "category",
   ]);
   const content = await markdownToHtml(post.content || "");
 

@@ -10,6 +10,7 @@ ogImage:
   url: '/assets/images/SPI_Banner_2.jpg'
 steamLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2834590176'
 trailer: 'https://www.youtube.com/embed/J8pM9wVwqKU'
+category: 'Mod'
 ---
 
 ## Overview
