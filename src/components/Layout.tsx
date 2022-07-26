@@ -22,8 +22,11 @@ const Layout = ({
 }) => {
   return (
     <div className="layout">
-      {!fullWidth && <Header position="relative" breadcrumbs={breadcrumbs} />}
-      {fullWidth && <Header breadcrumbs={breadcrumbs} />}
+      {!fullWidth ? (
+        <Header position="relative" breadcrumbs={breadcrumbs} />
+      ) : (
+        <Header breadcrumbs={breadcrumbs} />
+      )}
       <main>
         {stripes && (
           <Stripe
