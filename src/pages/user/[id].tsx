@@ -17,7 +17,7 @@ const User = () => {
   }
 
   return (
-    <Layout>
+    <Layout fullWidth={false} breadcrumbs={true} stripes={true}>
       <article>
         <Head>
           <title>The Kingdom | User: {sesh.user?.name}</title>

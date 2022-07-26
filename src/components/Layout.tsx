@@ -7,17 +7,19 @@ type Stripes = {
   amount: number;
 };
 
-type Props = {
+const Layout = ({
+  children,
+  fullWidth,
+  breadcrumbs,
+  stripes,
+  stripeProps,
+}: {
   children: React.ReactNode;
   fullWidth?: boolean;
   breadcrumbs?: boolean;
   stripes?: boolean;
   stripeProps?: Stripes;
-};
-
-const Layout = (props: Props) => {
-  const { children, fullWidth, breadcrumbs, stripes, stripeProps } = props;
-
+}) => {
   return (
     <div className="layout">
       {!fullWidth && <Header position="relative" breadcrumbs={breadcrumbs} />}
