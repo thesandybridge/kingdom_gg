@@ -17,5 +17,14 @@ export default defineNextConfig({
   swcMinify: true,
   images: {
     domains: ['cdn.discordapp.com']
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: '/user',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+  },
 });

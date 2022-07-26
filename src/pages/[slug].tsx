@@ -26,7 +26,6 @@ const Mod = ({ post }: Props) => {
   return (
     <div className={styles.container}>
       <Header position="relative" />
-      <Breadcrumbs useDefaultStyle={false} containerClassName="breadcrumbs" />
       <main className={styles.main}>
         <Stripe height={5} amount={2} />
         {router.isFallback ? (
