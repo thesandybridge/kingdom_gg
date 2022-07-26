@@ -16,6 +16,9 @@ const User = () => {
   return (
     <div>
       <Header position="relative" breadcrumbs={true} />
+      <main>
+        <h1>Feature Coming Soon</h1>
+      </main>
       <Footer />
     </div>
   );
