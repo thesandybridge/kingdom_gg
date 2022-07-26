@@ -170,7 +170,7 @@ const Header = (props: HeaderProps) => {
           </div>
           <div className={styles.utils}>
             <Games />
-            <User />
+            {/* <User /> */}
           </div>
         </div>
       </header>
