@@ -25,7 +25,7 @@ const Mod = ({ post }: Props) => {
   }
   return (
     <div className={styles.container}>
-      <Header position="relative" />
+      <Header position="relative" breadcrumbs={true} />
       <main className={styles.main}>
         <Stripe height={5} amount={2} />
         {router.isFallback ? (
