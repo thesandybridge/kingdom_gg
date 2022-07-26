@@ -78,7 +78,6 @@ const InfoPanel = (props: any) => {
   return (
     info && (
       <section className={styles.info}>
-        <h2 className={styles.infoTitle}>Our Mods</h2>
         <div className={styles.infoPanel}>
           {info.map((mod: any) => {
             return <InfoCard key={mod.slug} {...mod} />;
