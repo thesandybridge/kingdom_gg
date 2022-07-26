@@ -16,6 +16,7 @@ type PostType = {
   content: string;
   steamLink: string;
   trailer: string;
+  category: string;
 };
 
 export type { PostType };
