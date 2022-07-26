@@ -25,7 +25,7 @@ const Mod = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout fullWidth={false} breadcrumbs={true}>
+    <Layout fullWidth={false} breadcrumbs={true} stripes={true}>
       {router.isFallback ? (
         <h2>Loading…</h2>
       ) : (
