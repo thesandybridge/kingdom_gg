@@ -10,9 +10,9 @@ import { getAllPosts } from "../utils/api";
 import King from "../svgs/king";
 import Layout from "../components/Layout";
 
-const Hero = (props: any) => {
+const Hero = () => {
   return (
-    <section id="hero" {...props} className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <Stream
         className={styles.video}
         loop={true}
@@ -72,8 +72,11 @@ const InfoCard = (props: PostType) => {
   );
 };
 
-const InfoPanel = (props: any) => {
-  const { info } = props;
+type InfoPanelProps = {
+  info: PostType[];
+};
+
+const InfoPanel = ({ info }: InfoPanelProps) => {
   return (
     info && (
       <section className={styles.infoPanel}>
@@ -85,7 +88,11 @@ const InfoPanel = (props: any) => {
   );
 };
 
-const Home: NextPage = ({ allPosts }: any) => {
+type HomeProps = {
+  allPosts: PostType[];
+};
+
+const Home = ({ allPosts }: HomeProps) => {
   return (
     <Layout fullWidth breadcrumbs={false} stripes={false}>
       <Head>

@@ -1,4 +1,4 @@
-export default function SteamSVG() {
+export default function SteamSVG(): JSX.Element {
   return (
     <svg
       version="1.1"

@@ -1,4 +1,4 @@
-export default function King() {
+export default function King(): JSX.Element {
   return (
     <svg
       id="Layer_1"

@@ -5,8 +5,7 @@ type Props = {
   height: number;
 };
 
-export default function Stripe(props: Props) {
-  const { height, amount } = props;
+export default function Stripe({ height, amount }: Props) {
   return (
     <hr
       className={styles.stripes}
