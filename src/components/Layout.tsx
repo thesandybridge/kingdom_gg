@@ -21,7 +21,7 @@ const Layout = ({
   stripeProps?: Stripes;
 }) => {
   return (
-    <div className="layout"></div>
+    <div className="layout">
       {!fullWidth ? (
         <Header position="relative" breadcrumbs={breadcrumbs} />
       ) : (
