@@ -1,12 +1,4 @@
-.stripes {
-  height: calc(20px * 2);
-  background-image: linear-gradient(
-    var(--gold) 0%,
-    var(--gold) 50%,
-    var(--red) 50%,
-    var(--red) 100%
-  );
-}
+
 
 .hero {
   position: relative;

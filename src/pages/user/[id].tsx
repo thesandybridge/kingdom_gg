@@ -3,6 +3,9 @@ import Footer from "../../components/FooterComponent/Footer";
 import Header from "../../components/HeaderComponent/Header";
 import { useSession } from "next-auth/react";
 import ErrorPage from "next/error";
+import styles from "./Users.module.css";
+import Head from "next/head";
+import Layout from "../../components/Layout";
 
 const User = () => {
   const { data: sesh } = useSession();
@@ -14,13 +17,31 @@ const User = () => {
   }
 
   return (
-    <div>
-      <Header position="relative" breadcrumbs={true} />
-      <main>
-        <h1>Feature Coming Soon</h1>
-      </main>
-      <Footer />
-    </div>
+    <Layout fullWidth={false} breadcrumbs={true} stripes={true}>
+      <article>
+        <Head>
+          <title>The Kingdom | User: {sesh.user?.name}</title>
+          <meta property="og:type" content="object"></meta>
+          <meta
+            property="og:title"
+            content={`The Kingdom | User: ${sesh.user?.name}`}
+            key="title"
+          />
+          <meta
+            property="og:url"
+            content={process.env.VERCEL_URL + router.asPath}
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content="kingdomgaming.gg" />
+          <meta property="twitter:url" content={process.env.VERCEL_URL} />
+          <meta
+            name="twitter:title"
+            content={`The Kingdom | User: ${sesh.user?.name}`}
+          />
+        </Head>
+        <h1>Feature Coming Soon...</h1>
+      </article>
+    </Layout>
   );
 };
 

@@ -10,6 +10,7 @@ import styles from "../styles/Home.module.css";
 import Stripe from "../components/StripesComponent/Stripe";
 import { getAllPosts } from "../utils/api";
 import King from "../svgs/king";
+import Layout from "../components/Layout";
 
 const Hero = (props: any) => {
   return (
@@ -90,7 +91,7 @@ const InfoPanel = (props: any) => {
 
 const Home: NextPage = ({ allPosts }: any) => {
   return (
-    <div className={styles.container}>
+    <Layout fullWidth breadcrumbs={false} stripes={false}>
       <Head>
         <title>The Kingdom | Gaming Community</title>
         <meta
@@ -103,17 +104,10 @@ const Home: NextPage = ({ allPosts }: any) => {
           content="The Kingdom is a online gaming community."
         />
       </Head>
-
-      <Header />
-
-      <main className={styles.main}>
-        <Hero />
-        <Stripe height={5} amount={2} />
-        <InfoPanel info={allPosts} />
-      </main>
-
-      <Footer />
-    </div>
+      <Hero />
+      <Stripe height={5} amount={2} />
+      <InfoPanel info={allPosts} />
+    </Layout>
   );
 };
 

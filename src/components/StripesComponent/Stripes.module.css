@@ -5,4 +5,6 @@
     var(--black) 50%,
     var(--black) 100%
   );
+
+  border: none;
 }
