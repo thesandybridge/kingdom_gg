@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Footer from "../components/FooterComponent/Footer";
-import Header from "../components/HeaderComponent/Header";
 import { Stream } from "@cloudflare/stream-react";
 import Link from "next/link";
 import Image from "next/image";
