@@ -18,13 +18,4 @@ export default defineNextConfig({
   images: {
     domains: ['cdn.discordapp.com']
   },
-  async redirects() {
-    return [
-      {
-        source: '/user',
-        destination: '/',
-        permanent: true,
-      },
-    ]
-  },
 });
