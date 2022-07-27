@@ -37,7 +37,11 @@ const User = () => {
             content={`The Kingdom | User: ${sesh.user?.name}`}
           />
         </Head>
-        <h1>Feature Coming Soon...</h1>
+        <section className={styles.userBody}>
+          <div className="inner-content">
+            <h1>Feature Coming Soon...</h1>
+          </div>
+        </section>
       </article>
     </Layout>
   );
