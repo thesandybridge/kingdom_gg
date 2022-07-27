@@ -15,8 +15,6 @@ import Layout from "../components/Layout";
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
-  preview?: boolean;
 };
 
 const Mod = ({ post }: Props) => {
