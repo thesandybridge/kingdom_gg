@@ -79,7 +79,8 @@ const Mod = ({ post }: Props) => {
                         href={post.steamLink}
                         title={`${post.title} on Steam Workshop`}
                         target="_blank"
-                        rel="noreferrer"
+                        aria-label={`${post.title} on Steam Workshop`}
+                        rel="noreferrer noopener"
                       >
                         <SteamSVG />
                       </a>

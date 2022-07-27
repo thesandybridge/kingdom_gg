@@ -8,13 +8,14 @@ export default function Games() {
         className="linked-svg"
         href="https://joinsquad.com/"
         target="_blank"
-        rel="noreferrer"
+        rel="noreferrer noopener"
+        aria-label="Squad's Website"
       >
         <Image
           src="/assets/squad_logo.png"
           width="100px"
           height="50px"
-          alt="Squad"
+          alt="Squad Logo"
         />
       </a>
       <a
@@ -22,9 +23,11 @@ export default function Games() {
         title="Kingdom Gaming Discord"
         href="https://discord.gg/F3gkmGw"
         target="_blank"
-        rel="noreferrer"
+        rel="noreferrer noopener"
+        aria-label="Join our Discord"
       >
         <svg
+          aria-label="Discord Logo"
           width="35"
           height="55"
           viewBox="0 0 71 55"

@@ -12,7 +12,7 @@ import Layout from "../components/Layout";
 
 const Hero = (props: any) => {
   return (
-    <section {...props} className={styles.hero}>
+    <section id="hero" {...props} className={styles.hero}>
       <Stream
         className={styles.video}
         loop={true}
@@ -35,7 +35,7 @@ const Hero = (props: any) => {
 
 const InfoCard = (props: PostType) => {
   return (
-    <div className={styles.infoCard}>
+    <article className={styles.infoCard}>
       <div className={styles.cardHeader}>
         {props.coverImage && (
           <div className={styles.featuredImage}>
@@ -53,7 +53,7 @@ const InfoCard = (props: PostType) => {
             href={props.steamLink}
             target="_blank"
             title={`${props.title} on Steam Workshop`}
-            rel="noreferrer"
+            rel="noreferrer noopener"
           >
             {props.title}
           </a>
@@ -68,7 +68,7 @@ const InfoCard = (props: PostType) => {
           <button>read more</button>
         </Link>
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -76,12 +76,10 @@ const InfoPanel = (props: any) => {
   const { info } = props;
   return (
     info && (
-      <section className={styles.info}>
-        <div className={styles.infoPanel}>
-          {info.map((post: any) => {
-            return <InfoCard key={post.slug} {...post} />;
-          })}
-        </div>
+      <section className={styles.infoPanel}>
+        {info.map((post: any) => {
+          return <InfoCard key={post.slug} {...post} />;
+        })}
       </section>
     )
   );

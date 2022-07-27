@@ -71,6 +71,7 @@ const User = () => {
           width={32}
           height={32}
           objectFit="cover"
+          tabIndex={0}
           onClick={() => setIsOpen(!isOpen)}
           title={`Logout ${data.user?.name}`}
         />
@@ -101,9 +102,11 @@ const Header = (props: HeaderProps) => {
               className="linked-svg"
               href="https://discord.gg/F3gkmGw"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
+              aria-label="Join the Discord"
             >
               <svg
+                aria-label="Kingdom Logo"
                 xmlns="http://www.w3.org/2000/svg"
                 className={styles.logo}
                 width="48.36"
