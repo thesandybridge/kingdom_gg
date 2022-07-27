@@ -1,6 +1,4 @@
 import { useRouter } from "next/router";
-import Footer from "../../components/FooterComponent/Footer";
-import Header from "../../components/HeaderComponent/Header";
 import { useSession } from "next-auth/react";
 import ErrorPage from "next/error";
 import styles from "./Users.module.css";
