@@ -8,9 +8,9 @@ type Props = {
 export default function Stripe(props: Props) {
   const { height, amount } = props;
   return (
-    <div
+    <hr
       className={styles.stripes}
       style={{ height: `calc(${height}px * ${amount})` }}
-    ></div>
+    />
   );
 }

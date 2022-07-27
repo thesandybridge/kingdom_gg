@@ -59,7 +59,7 @@ const Mod = ({ post }: Props) => {
               <meta name="twitter:description" content={post.excerpt} />
               <meta name="twitter:image" content={post.ogImage?.url} />
             </Head>
-            <div className={styles.modBody}>
+            <section className={styles.modBody}>
               <div className="inner-content">
                 {post.coverImage && (
                   <div className={styles.featuredImage}>
@@ -103,7 +103,7 @@ const Mod = ({ post }: Props) => {
                   ></iframe>
                 )}
               </div>
-            </div>
+            </section>
           </article>
         </>
       )}
