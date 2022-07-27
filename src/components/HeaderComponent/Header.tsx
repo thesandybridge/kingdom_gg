@@ -5,33 +5,15 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Breadcrumbs from "nextjs-breadcrumbs";
+import useClickOutside from "../../utils/useClickOutside";
 
 type HeaderProps = {
   position?: "absolute" | "relative" | "static" | "sticky";
   breadcrumbs?: boolean;
 };
 
-type ProfileProps = {
-  onClickOutside: () => void;
-};
-
-const Profile = (props: ProfileProps) => {
+const Profile = () => {
   const { data } = useSession();
-
-  const ref = useRef<any>(null);
-  const { onClickOutside } = props;
-
-  useEffect(() => {
-    const handleClickOutside = (event: any) => {
-      if (ref.current && !ref.current.contains(event.target)) {
-        onClickOutside && onClickOutside();
-      }
-    };
-    document.addEventListener("click", handleClickOutside, true);
-    return () => {
-      document.removeEventListener("click", handleClickOutside, true);
-    };
-  }, [onClickOutside]);
 
   if (!data) {
     return null;
@@ -50,7 +32,7 @@ const Profile = (props: ProfileProps) => {
             ></path>
           </svg>
         </div>
-        <div className={styles.profileMenu} ref={ref}>
+        <div className={styles.profileMenu}>
           <div className={styles.userInfo}>
             <Link className={styles.userTitle} href={`user/${data.user?.id}`}>
               {data.user?.name}
@@ -69,8 +51,8 @@ const User = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { data } = useSession();
 
-  console.log(isOpen);
-
+  const popup = useRef<any>(null);
+  useClickOutside(popup, () => setIsOpen(false));
   if (!data) {
     return (
       <button className={styles.login} onClick={() => signIn("discord")}>
@@ -79,7 +61,7 @@ const User = () => {
     );
   }
   return (
-    <div className={styles.user}>
+    <div className={styles.user} ref={popup}>
       <button
         className={styles.popupTrigger}
         tabIndex={0}
@@ -97,13 +79,7 @@ const User = () => {
         )}
       </button>
       <div className={styles.popupWrapper} aria-hidden={!isOpen} role="menu">
-        {isOpen && (
-          <Profile
-            onClickOutside={() => {
-              setIsOpen(!isOpen);
-            }}
-          />
-        )}
+        {isOpen && <Profile />}
       </div>
     </div>
   );
