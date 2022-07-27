@@ -98,13 +98,12 @@
 }
 
 .profileMenu {
-  position: absolute;
-  top: 100%;
-  right: 0;
   background-color: var(--charcoal);
   border-radius: 0.5rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   z-index: 999;
+  margin-top: 10px;
+  border: solid 1px var(--gold);
 }
 
 .logout  {
@@ -130,6 +129,45 @@
   padding: 1rem;
   display: flex;
   justify-content: center;
+}
+
+.popupWrapper {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  opacity: 0;
+  animation: popup .1s ease-in forwards;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.popup {
+  display: inline-block;
+  position: absolute;
+  transform: translate(-100%);
+}
+
+.popupInnerWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.triangle {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+}
+
+.popupTrigger {
+  border: none;
+  background: none;
 }
 
 

@@ -25,7 +25,6 @@ const Profile = (props: ProfileProps) => {
     const handleClickOutside = (event: any) => {
       if (ref.current && !ref.current.contains(event.target)) {
         onClickOutside && onClickOutside();
-        console.log(ref);
       }
     };
     document.addEventListener("click", handleClickOutside, true);
@@ -38,15 +37,30 @@ const Profile = (props: ProfileProps) => {
     return null;
   }
   return (
-    <div className={styles.profileMenu} ref={ref}>
-      <div className={styles.userInfo}>
-        <Link className={styles.userTitle} href={`user/${data.user?.id}`}>
-          {data.user?.name}
-        </Link>
+    <div className={styles.popup}>
+      <div className={styles.popupInnerWrapper}>
+        <div className={styles.triangle}>
+          <svg height="12" viewBox="0 0 24 12" width="24">
+            <path
+              d="M20 12l-8-8-12 12"
+              fill="var(--charcoal)"
+              fillRule="evenodd"
+              stroke="var(--gold)"
+              strokeWidth="1px"
+            ></path>
+          </svg>
+        </div>
+        <div className={styles.profileMenu} ref={ref}>
+          <div className={styles.userInfo}>
+            <Link className={styles.userTitle} href={`user/${data.user?.id}`}>
+              {data.user?.name}
+            </Link>
+          </div>
+          <button className={styles.logout} onClick={() => signOut()}>
+            Logout
+          </button>
+        </div>
       </div>
-      <button className={styles.logout} onClick={() => signOut()}>
-        Logout
-      </button>
     </div>
   );
 };
@@ -54,6 +68,8 @@ const Profile = (props: ProfileProps) => {
 const User = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { data } = useSession();
+
+  console.log(isOpen);
 
   if (!data) {
     return (
@@ -64,25 +80,31 @@ const User = () => {
   }
   return (
     <div className={styles.user}>
-      {data.user?.image && (
-        <Image
-          src={data.user?.image}
-          alt="avatar"
-          width={32}
-          height={32}
-          objectFit="cover"
-          tabIndex={0}
-          onClick={() => setIsOpen(!isOpen)}
-          title={`Logout ${data.user?.name}`}
-        />
-      )}
-      {isOpen && (
-        <Profile
-          onClickOutside={() => {
-            setIsOpen(false);
-          }}
-        />
-      )}
+      <button
+        className={styles.popupTrigger}
+        tabIndex={0}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {data.user?.image && (
+          <Image
+            src={data.user?.image}
+            alt="avatar"
+            width={32}
+            height={32}
+            objectFit="cover"
+            title={`Logout ${data.user?.name}`}
+          />
+        )}
+      </button>
+      <div className={styles.popupWrapper} aria-hidden={!isOpen} role="menu">
+        {isOpen && (
+          <Profile
+            onClickOutside={() => {
+              setIsOpen(!isOpen);
+            }}
+          />
+        )}
+      </div>
     </div>
   );
 };
