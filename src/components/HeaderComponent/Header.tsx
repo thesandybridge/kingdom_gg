@@ -65,6 +65,7 @@ const User = () => {
       <button
         className={styles.popupTrigger}
         tabIndex={0}
+        aria-label="Popup Trigger"
         onClick={() => setIsOpen(!isOpen)}
       >
         {data.user?.image && (
