@@ -12,6 +12,7 @@ import Image from "next/image";
 import SteamSVG from "../svgs/steam";
 import { PostType } from "../types/posts";
 import Layout from "../components/Layout";
+import MapSVG from "../svgs/map";
 
 type Props = {
   post: PostType;
@@ -73,6 +74,18 @@ const Mod = ({ post }: Props) => {
                   <h1>{post.title}</h1>
 
                   <div className={styles.modSocials}>
+                    {post.roadmap && (
+                      <a
+                        className="linked-svg"
+                        href={post.roadmap}
+                        title={`${post.title} Roadmap`}
+                        target="_blank"
+                        aria-label={`${post.title} Roadmap`}
+                        rel="noreferrer noopener"
+                      >
+                        <MapSVG />
+                      </a>
+                    )}
                     {post.steamLink && (
                       <a
                         className="linked-svg"
@@ -129,6 +142,7 @@ export async function getStaticProps({ params }: Params) {
     "steamLink",
     "trailer",
     "category",
+    "roadmap",
   ]);
   const content = await markdownToHtml(post.content || "");
 

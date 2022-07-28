@@ -10,6 +10,7 @@
 .modMeta {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .trailer {
@@ -22,4 +23,10 @@
     width: 100%;
     height: 300px;
     margin-bottom: 1.5rem;
+}
+
+.modSocials {
+    display: flex;
+    padding: .5rem 0;
+    gap: 1rem;
 }
