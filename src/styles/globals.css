@@ -103,6 +103,19 @@ svg:hover {
   animation: fillChange 0.5s infinite;
 }
 
+.king-logo-eyes {
+  animation: eyeColor 2s infinite;
+}
+
+@keyframes eyeColor {
+  0% {
+    fill: var(--black);
+  }
+  100% {
+    fill: var(--red);
+  }
+}
+
 @keyframes fillChange {
   0% {
     fill: var(--black);
