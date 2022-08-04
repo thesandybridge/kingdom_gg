@@ -24,7 +24,7 @@ Once the staging phase ends all hell breaks loose.
 
 ## Join our server
 
-We are currently in the process of testing this mod on our server. If you want to get a preview of what is to come pleas join the Kingdom!
+We are currently in the process of testing this mod on our server. If you want to get a preview of what is to come please join the Kingdom!
 
 [![Banner for Kingdomgaming.gg | Single Point Invasion](https://cdn.battlemetrics.com/b/horizontal500x80px/16079633.png?foreground=%23EEEEEE&background=%23222222&lines=%23333333&linkColor=%231185ec&chartColor=%23FF0700)](https://www.battlemetrics.com/servers/squad/16079633)
 
