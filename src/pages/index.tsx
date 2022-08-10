@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import { Stream } from "@cloudflare/stream-react";
 import Link from "next/link";
