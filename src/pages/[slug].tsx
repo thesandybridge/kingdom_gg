@@ -1,9 +1,6 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import Breadcrumbs from "nextjs-breadcrumbs";
-import Footer from "../components/FooterComponent/Footer";
-import Header from "../components/HeaderComponent/Header";
 import Stripe from "../components/StripesComponent/Stripe";
 import styles from "../styles/Mods.module.css";
 import { getPostBySlug, getAllPosts } from "../utils/api";
