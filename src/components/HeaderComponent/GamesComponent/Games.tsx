@@ -3,22 +3,7 @@ import styles from "./Games.module.css";
 export default function Games() {
   return (
     <div className={styles.games}>
-      <a
-        title="Squad"
-        className="linked-svg"
-        href="https://joinsquad.com/"
-        target="_blank"
-        rel="noreferrer noopener"
-        aria-label="Squad's Website"
-      >
-        <Image
-          src="/assets/squad_logo.png"
-          width="100px"
-          height="50px"
-          alt="Squad Logo"
-        />
-      </a>
-      <a
+     <a
         className="linked-svg"
         title="Kingdom Gaming Discord"
         href="https://discord.gg/F3gkmGw"
