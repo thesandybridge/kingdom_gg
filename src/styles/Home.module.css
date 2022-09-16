@@ -21,19 +21,6 @@
 .svg {
   fill: #bfa25d;
 }
-.king-logo-eyes {
-    opacity: 1;
-    animation: animateEyes 1s ease-in-out;
-}
-
-@keyframes animateEyes {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 .circleBG {
   fill: #fff;

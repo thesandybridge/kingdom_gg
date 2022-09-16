@@ -140,3 +140,17 @@ svg:hover {
 [target="_blank"]:not(.linked-svg):hover::after {
   background-color: var(--gold);
 }
+
+.king-logo-eyes {
+    opacity: 1;
+    animation: animateEyes 1s ease-in-out;
+}
+
+@keyframes animateEyes {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
