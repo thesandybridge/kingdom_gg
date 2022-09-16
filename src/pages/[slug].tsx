@@ -57,16 +57,7 @@ const Mod = ({ post }: Props) => {
             </Head>
             <section className={styles.modBody}>
               <div className="inner-content">
-                {post.coverImage && (
-                  <div className={styles.featuredImage}>
-                    <Image
-                      src={post.coverImage}
-                      alt={post.title}
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </div>
-                )}
+                
                 {post.trailer && (
                   <iframe
                     className={styles.trailer}
@@ -113,6 +104,16 @@ const Mod = ({ post }: Props) => {
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 
               </div>
+              {post.coverImage && (
+                  <div className={styles.featuredImage}>
+                    <Image
+                      src={post.coverImage}
+                      alt={post.title}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                )}
             </section>
           </article>
         </>
