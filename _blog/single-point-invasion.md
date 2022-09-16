@@ -1,13 +1,13 @@
 ---
 title: 'Single Point Invasion'
 excerpt: 'Single Point Invasion is a Squad mod that is an enhanced version of the game mode invasion.'
-coverImage: '/assets/images/SPI_Banner.jpg'
+coverImage: '/assets/images/SPI_Banner_v.3.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: The Kingdom
   picture: ''
 ogImage:
-  url: '/assets/images/SPI_Banner.jpg'
+  url: '/assets/images/SPI_Banner_v.3.jpg'
 steamLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2844305020'
 trailer: 'https://www.youtube.com/embed/oZmuVSzhJW8'
 category: 'Mod'
