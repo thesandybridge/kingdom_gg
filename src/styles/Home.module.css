@@ -72,6 +72,8 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  background: rgb(33,33,33);
+  background: linear-gradient(0deg, rgba(33,33,33,1) 25%, rgba(0,0,0,1) 75%);
 }
 
 .infoTitle {
@@ -85,6 +87,7 @@
   flex-direction: column;
   border: solid 2px var(--black);
   color: #ececec;
+  background-color: var(--black);
 }
 
 .infoCard .featuredImage {
