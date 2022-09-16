@@ -67,6 +67,18 @@ const Mod = ({ post }: Props) => {
                     />
                   </div>
                 )}
+                {post.trailer && (
+                  <iframe
+                    className={styles.trailer}
+                    width="100%"
+                    height="auto"
+                    src={post.trailer}
+                    title={`${post.title} trailer`}
+                    frameBorder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                )}
                 <div className={styles.modMeta}>
                   <h1>{post.title}</h1>
 
@@ -99,18 +111,7 @@ const Mod = ({ post }: Props) => {
                 </div>
                 <Stripe height={4} amount={2} />
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                {post.trailer && (
-                  <iframe
-                    className={styles.trailer}
-                    width="100%"
-                    height="auto"
-                    src={post.trailer}
-                    title={`${post.title} trailer`}
-                    frameBorder="0"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                )}
+                
               </div>
             </section>
           </article>
