@@ -21,6 +21,19 @@
 .svg {
   fill: #bfa25d;
 }
+.king-logo-eyes {
+    opacity: 1;
+    animation: animateEyes 1s ease-in-out;
+}
+
+@keyframes animateEyes {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .circleBG {
   fill: #fff;
@@ -52,13 +65,13 @@
 }
 
 .bannerTitle > .title {
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: 4rem;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .bannerTitle > .subTitle {
-  font-size: clamp(2.5rem, 2vw, 5rem);
+  font-size: 2rem;
   line-height: 1;
   text-transform: uppercase;
   color: var(--gold);
