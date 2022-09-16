@@ -9,7 +9,7 @@ author:
 ogImage:
   url: '/assets/images/SPI_Banner.jpg'
 steamLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2844305020'
-trailer: 'https://www.youtube.com/embed/J8pM9wVwqKU'
+trailer: 'https://www.youtube.com/embed/oZmuVSzhJW8'
 category: 'Mod'
 roadmap: 'https://trello.com/b/gXP2YEqf/single-point-invasion'
 ---
