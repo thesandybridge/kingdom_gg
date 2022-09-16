@@ -2,7 +2,7 @@ export default function King(): JSX.Element {
   return (
     <svg
       id="Layer_1"
-      width="15%"
+      width="10%"
       data-name="Layer 1"
       fill="#BFA25D"
       xmlns="http://www.w3.org/2000/svg"

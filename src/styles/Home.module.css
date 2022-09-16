@@ -52,7 +52,7 @@
 }
 
 .bannerTitle > .title {
-  font-size: clamp(2.5rem, 5vw, 9rem);
+  font-size: clamp(2.5rem, 5vw, 5rem);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -61,7 +61,7 @@
   font-size: clamp(2.5rem, 2vw, 5rem);
   line-height: 1;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--gold);
 }
 
 .infoPanel {
