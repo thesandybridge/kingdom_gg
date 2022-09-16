@@ -102,9 +102,7 @@ const Mod = ({ post }: Props) => {
                 </div>
                 <Stripe height={4} amount={2} />
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                
-              </div>
-              {post.coverImage && (
+                {post.coverImage && (
                   <div className={styles.featuredImage}>
                     <Image
                       src={post.coverImage}
@@ -113,7 +111,9 @@ const Mod = ({ post }: Props) => {
                       objectFit="cover"
                     />
                   </div>
-                )}
+                )}  
+              </div>
+              
             </section>
           </article>
         </>
