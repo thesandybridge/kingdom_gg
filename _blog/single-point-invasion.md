@@ -11,7 +11,6 @@ ogImage:
 steamLink: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2844305020'
 trailer: 'https://www.youtube.com/embed/VUJYZMALK7I'
 category: 'Mod'
-roadmap: 'https://trello.com/b/gXP2YEqf/single-point-invasion'
 ---
 
 ## Overview
