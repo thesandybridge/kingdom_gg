@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 import ErrorPage from "next/error";
 import styles from "./Users.module.css";
 import Head from "next/head";
-import Layout from "../../components/Layout";
+import Layout from "../layout";
 
 const User = () => {
   const { data: sesh } = useSession();
