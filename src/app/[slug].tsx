@@ -8,7 +8,7 @@ import markdownToHtml from "../utils/markdownToHTML";
 import Image from "next/image";
 import SteamSVG from "../svgs/steam";
 import { PostType } from "../types/posts";
-import Layout from "../components/Layout";
+import Layout from "./layout";
 import MapSVG from "../svgs/map";
 
 type Props = {
@@ -57,7 +57,6 @@ const Mod = ({ post }: Props) => {
             </Head>
             <section className={styles.modBody}>
               <div className="inner-content">
-                
                 {post.trailer && (
                   <iframe
                     className={styles.trailer}
@@ -111,9 +110,8 @@ const Mod = ({ post }: Props) => {
                       objectFit="cover"
                     />
                   </div>
-                )}  
+                )}
               </div>
-              
             </section>
           </article>
         </>

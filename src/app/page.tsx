@@ -1,4 +1,5 @@
-import Head from "next/head";
+"use client";
+
 import { Stream } from "@cloudflare/stream-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +8,7 @@ import styles from "../styles/Home.module.css";
 import Stripe from "../components/StripesComponent/Stripe";
 import { getAllPosts } from "../utils/api";
 import King from "../svgs/king";
-import Layout from "../components/Layout";
+import Layout from "./layout";
 
 const Hero = () => {
   return (
@@ -91,21 +92,9 @@ type HomeProps = {
   allPosts: PostType[];
 };
 
-const Home = ({ allPosts }: HomeProps) => {
+const Page = ({ allPosts }: HomeProps) => {
   return (
     <Layout fullWidth breadcrumbs={false} stripes={false}>
-      <Head>
-        <title>The Kingdom | Gaming Community</title>
-        <meta
-          property="og:title"
-          content="The Kingdom | Gaming Community"
-          key="title"
-        />
-        <meta
-          name="description"
-          content="The Kingdom is a online gaming community."
-        />
-      </Head>
       <Hero />
       <Stripe height={5} amount={2} />
       <InfoPanel info={allPosts} />
@@ -113,7 +102,7 @@ const Home = ({ allPosts }: HomeProps) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const generateStaticParams = async () => {
   const allPosts = getAllPosts([
     "title",
     "date",
@@ -129,4 +118,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Home;
+export default Page;
