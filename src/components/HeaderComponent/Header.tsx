@@ -1,3 +1,4 @@
+"use client";
 import styles from "./Header.module.css";
 import Games from "./GamesComponent/Games";
 import Image from "next/image";
