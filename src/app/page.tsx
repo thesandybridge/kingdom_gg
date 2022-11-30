@@ -94,11 +94,11 @@ type HomeProps = {
 
 const Page = ({ allPosts }: HomeProps) => {
   return (
-    <Layout fullWidth breadcrumbs={false} stripes={false}>
+    <>
       <Hero />
       <Stripe height={5} amount={2} />
-      <InfoPanel info={allPosts} />
-    </Layout>
+      {/* <InfoPanel info={allPosts} /> */}
+    </>
   );
 };
 
