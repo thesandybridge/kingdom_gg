@@ -13,80 +13,6 @@ type HeaderProps = {
   breadcrumbs?: boolean;
 };
 
-const Profile = () => {
-  const { data } = useSession();
-
-  if (!data) {
-    return null;
-  }
-  return (
-    <div className={styles.popup}>
-      <div className={styles.popupInnerWrapper}>
-        <div className={styles.triangle}>
-          <svg height="12" viewBox="0 0 24 12" width="24">
-            <path
-              d="M20 12l-8-8-12 12"
-              fill="var(--charcoal)"
-              fillRule="evenodd"
-              stroke="var(--gold)"
-              strokeWidth="1px"
-            ></path>
-          </svg>
-        </div>
-        <div className={styles.profileMenu}>
-          <div className={styles.userInfo}>
-            <Link className={styles.userTitle} href={`user/${data.user?.id}`}>
-              {data.user?.name}
-            </Link>
-          </div>
-          <button className={styles.logout} onClick={() => signOut()}>
-            Logout
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const User = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { data } = useSession();
-
-  const popup = useRef<any>(null);
-  useClickOutside(popup, () => setIsOpen(false));
-  if (!data) {
-    return (
-      <button className={styles.login} onClick={() => signIn("discord")}>
-        Login
-      </button>
-    );
-  }
-  return (
-    <div className={styles.user} ref={popup}>
-      <button
-        className={styles.popupTrigger}
-        tabIndex={0}
-        aria-label="Popup Trigger"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {data.user?.image && (
-          <Image
-            src={data.user?.image}
-            alt="avatar"
-            width={32}
-            height={32}
-            objectFit="cover"
-            title={`Logout ${data.user?.name}`}
-          />
-        )}
-      </button>
-      <div className={styles.popupWrapper} aria-hidden={!isOpen} role="menu">
-        {isOpen && <Profile />}
-      </div>
-    </div>
-  );
-};
-
 const Header = (props: HeaderProps) => {
   const { position, breadcrumbs } = props;
 
@@ -173,7 +99,6 @@ const Header = (props: HeaderProps) => {
           </div>
           <div className={styles.utils}>
             <Games />
-            <User />
           </div>
         </div>
       </header>
