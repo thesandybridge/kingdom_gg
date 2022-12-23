@@ -1,13 +1,13 @@
 ---
 title: 'Rust Royale'
 excerpt: 'Rust royal is a Battle Royal with the playstyle of rust. Instead of looting for guns like in normal BRs.'
-coverImage: '/assets/images/Rust_Royale_Banner.jpg'
+coverImage: '/assets/images/Rust_Royale_banner.jpg'
 date: ''
 author:
   name: The Kingdom
   picture: ''
 ogImage:
-  url: '/assets/images/Rust_Royale_Banner.jpg'
+  url: '/assets/images/Rust_Royale_banner.jpg'
 steamLink: ''
 trailer: ''
 category: 'Mod'
