@@ -1,6 +1,6 @@
 ---
 title: 'Rust Royale'
-excerpt: 'Rust royal is a Battle Royal with the playstyle of rust. Instead of looting for guns like in normal BRs.'
+excerpt: 'Rust royal is a Battle Royal with the playstyle of rust.'
 coverImage: '/assets/images/Rust_Royale_banner.jpg'
 date: ''
 author:
