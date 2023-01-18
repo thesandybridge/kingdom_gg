@@ -9,7 +9,7 @@ author:
 ogImage:
   url: '/assets/images/Rust_Royale_banner.jpg'
 steamLink: ''
-trailer: 'https://www.youtube.com/embed/Ejjtg95CmJg'
+trailer: 'https://www.youtube.com/embed/u6xjwaBmxbU'
 category: 'Mod'
 ---
 
